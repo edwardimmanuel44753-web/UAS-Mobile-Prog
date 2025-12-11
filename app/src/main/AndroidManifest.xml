@@ -4,7 +4,7 @@
     <application
         android:usesCleartextTraffic="true"
         android:label="UAS_MobProg"
-        android:theme="@style/Theme.UAS_MobProg">
+        android:theme="@style/Theme.UASMobProg">
 
         <activity android:name=".ui.FormActivity"/>
         <activity android:name=".ui.DetailActivity"/>
