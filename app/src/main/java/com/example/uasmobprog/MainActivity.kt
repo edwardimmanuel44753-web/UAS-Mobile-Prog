@@ -42,9 +42,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.recyclerView.adapter = adapter
-
-        setupChips()
-        loadEvents()
+        binding.recyclerView.layoutManager =
+            androidx.recyclerview.widget.LinearLayoutManager(this)
     }
 
     override fun onResume() {
