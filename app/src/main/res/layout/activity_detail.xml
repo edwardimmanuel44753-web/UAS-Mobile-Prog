@@ -15,25 +15,25 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"/>
+            android:text="Back" />
 
         <Space
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"/>
+            android:text="Edit" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hapus"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+            android:text="Hapus" />
     </LinearLayout>
 
     <ProgressBar

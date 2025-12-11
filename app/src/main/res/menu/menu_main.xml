@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_search"
         android:title="Search"
         android:icon="@android:drawable/ic_menu_search"
-        android:showAsAction="always|collapseActionView"
-        android:actionViewClass="androidx.appcompat.widget.SearchView" />
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
     <item
         android:id="@+id/action_add"
         android:title="Add Event"
         android:icon="@android:drawable/ic_menu_add"
-        android:showAsAction="always" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_refresh"
         android:title="Refresh"
         android:icon="@android:drawable/ic_menu_rotate"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
 </menu>

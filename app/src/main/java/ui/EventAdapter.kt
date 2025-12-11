@@ -19,7 +19,11 @@ class EventAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val binding = ItemEventBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemEventBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
         return VH(binding)
     }
 
@@ -29,9 +33,12 @@ class EventAdapter(
 
     override fun getItemCount(): Int = items.size
 
-    inner class VH(private val binding: ItemEventBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class VH(private val binding: ItemEventBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
         fun bind(e: Event) {
             binding.tvTitle.text = e.title
+            // 1 baris meta: tanggal • waktu • lokasi
             binding.tvMeta.text = "${e.date} • ${e.time} • ${e.location}"
             binding.chipStatus.text = e.status
             binding.root.setOnClickListener { onClick(e) }

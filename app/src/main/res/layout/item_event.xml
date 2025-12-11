@@ -22,23 +22,23 @@
             android:text="Judul Event"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/tvDate"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvMeta"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="12 Feb 2025"
+            android:text="2025-02-12 • 10:00 • Kampus UNUD"
             android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp" />
 
-        <TextView
-            android:id="@+id/tvLocation"
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipStatus"
+            style="@style/Widget.MaterialComponents.Chip.Assist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kampus UNUD"
-            android:textSize="14sp"
-            android:layout_marginTop="2dp"/>
+            android:layout_marginTop="8dp"
+            android:text="upcoming" />
 
     </LinearLayout>
 
