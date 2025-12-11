@@ -9,47 +9,49 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.Material3.ActionBar"
-        app:title="Event Manager"/>
+        android:background="?attr/colorSurface"
+        android:elevation="4dp"
+        app:title="Event Manager"
+        app:titleCentered="true"
+        app:menu="@menu/menu_main"/>
 
     <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="12dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_marginTop="?attr/actionBarSize">
-
-        <TextView
-            android:id="@+id/tvCount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Menampilkan: 0 event"
-            android:textStyle="bold"
-            android:paddingBottom="8dp"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroup"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:singleSelection="true"
-            app:selectionRequired="true"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginTop="12dp"
+            app:singleSelection="true"/>
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"/>
+            android:text="Menampilkan 0 event"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="8dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:paddingTop="8dp"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
